@@ -1,7 +1,10 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\swaggerGetUserDetails;
+use App\Http\Controllers\accountsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +27,5 @@ Route::get('/mainpage', [swaggerGetUserDetails::class, 'mainpage2']);
 Route::get('/profile', [swaggerGetUserDetails::class, 'profile']);
 Route::post('/logout', [swaggerGetUserDetails::class, 'logout'])->name('logout');
 Route::get('/logout', [swaggerGetUserDetails::class, 'logout'])->name('logout');
+Route::get('/account-overview', [accountsController::class, 'accOverview'])->name('account-overview');
+Route::get('/check-balance', [accountsController::class, 'checkBalance']);

@@ -81,15 +81,15 @@
               <li class="sidebar-dropdown">
                 <a href="#">
                   <i class="bi bi-house"></i>
-                  <span class="menu-text">Dashboards</span>
+                  <span class="menu-text">Accounts</span>
                 </a>
                 <div class="sidebar-submenu">
                   <ul>
                     <li>
-                      <a href="index.html">Sales</a>
+                      <a href="account-overview">Account Overview</a>
                     </li>
                     <li>
-                      <a href="social.html">Social</a>
+                      <a href="check-balance">Check Balance</a>
                     </li>
                   </ul>
                 </div>
