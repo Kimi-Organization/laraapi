@@ -88,9 +88,9 @@
                     <li>
                       <a href="account-overview">Account Overview</a>
                     </li>
-                    <li>
-                      <a href="check-balance">Check Balance</a>
-                    </li>
+                    {{-- <li>
+                      <a href="agreements">My Agreements</a>
+                    </li> --}}
                   </ul>
                 </div>
               </li>
@@ -105,7 +105,7 @@
                       <a href="profile">Profile</a>
                     </li>
                     <li>
-                      <a href="products.html">Products</a>
+                      <a href="agreements">My Agreement</a>
                     </li>
                     <li>
                       <a href="view-cart.html">Shopping Cart</a>
@@ -128,12 +128,12 @@
               <li class="sidebar-dropdown">
                 <a href="#">
                   <i class="bi bi-gem"></i>
-                  <span class="menu-text">Widgets</span>
+                  <span class="menu-text">Funds</span>
                 </a>
                 <div class="sidebar-submenu">
                   <ul>
                     <li>
-                      <a href="widgets.html">Widgets</a>
+                      <a href="deposit-funds">Deposit Funds</a>
                     </li>
                     <li>
                       <a href="graph-widgets.html">Graph Widgets</a>

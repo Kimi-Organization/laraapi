@@ -4,6 +4,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\swaggerGetUserDetails;
 use App\Http\Controllers\accountsController;
+use App\Http\Controllers\fundsController;
 
 
 /*
@@ -28,4 +29,6 @@ Route::get('/profile', [swaggerGetUserDetails::class, 'profile']);
 Route::post('/logout', [swaggerGetUserDetails::class, 'logout'])->name('logout');
 Route::get('/logout', [swaggerGetUserDetails::class, 'logout'])->name('logout');
 Route::get('/account-overview', [accountsController::class, 'accOverview'])->name('account-overview');
-Route::get('/check-balance', [accountsController::class, 'checkBalance']);
+Route::get('/agreements', [accountsController::class, 'agreements'])->name('my-agreements');
+Route::get('/deposit-funds', [fundsController::class, 'paymentlist'])->name('deposit-funds');
+

@@ -13,29 +13,25 @@
                     @endif
 
                     @if (isset($data) && count($data) > 0)
-                        <h3>Account Details</h3>
+                        <h3>My Agreements</h3>
                         <table border="0" width="100%">
                             <thead>
                                 <tr>
-                                    <th>Login</th>
-                                    <th>Currency</th>
-                                    <th>Balance</th>
-                                    <th>Server ID</th>
+                                    <th>ID</th>
+                                    <th>Title</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($data as $item)
                                     <tr>
-                                        <td><strong>{{ $item['login'] ?? 'N/A' }}</strong></td>
-                                        <td><strong>{{ $item['currency'] ?? 'N/A' }}</strong></td>
-                                        <td><strong>{{ number_format((float)$item['balance'], 2) ?? 'N/A' }}</strong></td>
-                                        <td><strong>{{ $item['serverId'] ?? 'N/A' }}</strong></td>
+                                        <td><strong>{{ $item['id'] ?? 'N/A' }}</strong></td>
+                                        <td><strong>{{ $item['name'] ?? 'N/A' }}</strong></td>
                                     </tr>
                                 @endforeach
                             </tbody>
                         </table>
                     @else
-                        <p>No user data available.</p>
+                        <p>No agreements data available.</p>
                     @endif
 
                 </div>
