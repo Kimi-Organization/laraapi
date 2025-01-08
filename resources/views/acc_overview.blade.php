@@ -21,6 +21,9 @@
                                     <th>Currency</th>
                                     <th>Balance</th>
                                     <th>Server ID</th>
+                                    <th>Is Enabled</th>
+                                    <th>Group Name</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -30,6 +33,9 @@
                                         <td><strong>{{ $item['currency'] ?? 'N/A' }}</strong></td>
                                         <td><strong>{{ number_format((float)$item['balance'], 2) ?? 'N/A' }}</strong></td>
                                         <td><strong>{{ $item['serverId'] ?? 'N/A' }}</strong></td>
+                                        <td><strong>{{ $item['isEnabled'] ?? 'N/A' }}</strong></td>
+                                        <td><strong>{{ $item['groupName'] ?? 'N/A' }}</strong></td>
+                                        <td><strong>{{ $item['tradingStatus'] ?? 'N/A' }}</strong></td>
                                     </tr>
                                 @endforeach
                             </tbody>

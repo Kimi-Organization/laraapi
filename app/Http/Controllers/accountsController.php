@@ -16,7 +16,7 @@ class accountsController extends Controller
         {
             $loadid = session('loadid');
             // Define the API URL
-            $url = 'https://my.vestrado.com/rest/accounts/check-balance';
+            $url = 'https://my.vestrado.com/rest/accounts';
 
             // Set the headers
             $headers = [
