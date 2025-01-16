@@ -25,6 +25,8 @@
                                     <th>Group Name</th>
                                     <th>Status</th>
                                     <th>Account Type ID</th>
+                                    {{-- <th>Account Type Name</th> --}}
+                                    <th>Account Category</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,12 +40,36 @@
                                         <td><strong>{{ $item['groupName'] ?? 'N/A' }}</strong></td>
                                         <td><strong>{{ $item['tradingStatus'] ?? 'N/A' }}</strong></td>
                                         <td><strong>{{ $item['accountTypeId'] ?? 'N/A' }}</strong></td>
+                                        {{-- <td ><strong>{{ $item['accountTypeName'] ?? 'N/A' }}</strong></td> <!-- Display account type name --> --}}
+                                        <td ><strong>{{ $item['accountTypeCategory'] ?? 'N/A' }}</strong></td> <!-- Display account type name -->
                                     </tr>
                                 @endforeach
                             </tbody>
                         </table>
                     @else
                         <p>No user data available.</p>
+                    @endif
+
+                    @if (isset($accountTypes) && count($accountTypes) > 0)
+                        <h3>Account Types</h3>
+                        <table border="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Account Type ID</th>
+                                    <th>Account Type Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($accountTypes as $type)
+                                    <tr>
+                                        <td><strong>{{ $type['id'] ?? 'N/A' }}</strong></td>
+                                        <td><strong>{{ $type['name'] ?? 'N/A' }}</strong></td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    @else
+                        <p>No account types available.</p>
                     @endif
 
                 </div>
